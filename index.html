@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>10 điều tớ muốn Hoài sửa</title>
+    <meta property="og:title" content="10 điều tớ muốn Hoài sửa" />
+    <meta property="og:description"
+        content="Tớ biết cậu sẽ thấy không thoải mái khi đọc cái này, nhưng đây là một số điều tớ muốn nói với cậu. Mong cậu đừng giận tớ" />
+    <meta property="og:image" content="love.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="bootstrap.css">
+    <style>
+        * {
+            font-family: "Sansita Swashed", system-ui;
+            font-optical-sizing: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="height: 100vh; width: 100vw;background-color: #FEFDED;color: #FA7070;"
+        class="d-flex flex-column justify-content-center text-center p-5">
+        <div class="content d-none">
+            <h1>Trôn trôn VN</h1>
+            <p>Cậu mà phải sửa gì ư!!!, đối với tớ, cậu là một người rất tuyệt vời, nếu có gì phải sửa, tớ sẽ là người
+                làm
+                điều đó. Cậu chỉ cần là cậu thôi tớ thấy rất vui rồi. Dù đôi khi thật khó để thay đổi thói quen trong
+                suy
+                nghĩ, nhưng tớ sẽ học cách để mọi thứ dần tốt lên. I love you more than 3000, you know it?</p>
+            <span style="font-size: 50px;">❤️</span>
+        </div>
+        <button id="button" class="btn btn-danger">Bấm vô đây đi đồ khó chiều</button>
+    </div>
+    <script>
+        let btn = document.querySelector("#button")
+        btn.addEventListener("click", function () {
+            document.querySelector(".content").classList.toggle("d-none")
+            this.classList.add("d-none")
+        })
+    </script>
+</body>
+
+</html>
