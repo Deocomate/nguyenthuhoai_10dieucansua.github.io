@@ -36,15 +36,24 @@
                 nghĩ, nhưng tớ sẽ học cách để mọi thứ dần tốt lên. I love you more than 3000, you know it?</p>
             <span style="font-size: 50px;">❤️</span>
         </div>
-        <button id="button" class="btn btn-danger">Bấm vô đây đi đồ khó chiều</button>
+        <button id="button" class="btn btn-danger" style="font-size: 25px;">Bấm vô đây đi đồ khó chiều</button>
     </div>
     <script>
-        let btn = document.querySelector("#button")
+        let btn = document.querySelector("#button");
         btn.addEventListener("click", function () {
-            document.querySelector(".content").classList.toggle("d-none")
-            this.classList.add("d-none")
-        })
-    </script>
+            this.disabled = true; // Vô hiệu hóa button để không thể nhấn lại trong khi đang đếm ngược
+            let counter = 5;
+            const countdown = setInterval(() => {
+                btn.textContent = counter + ' ...';
+                counter--;
+                if (counter < 0) {
+                    clearInterval(countdown); // Dừng đếm ngược
+                    document.querySelector(".content").classList.toggle("d-none"); // Hiển thị nội dung
+                    btn.classList.add("d-none"); // Ẩn button
+                }
+            }, 1000); // Đặt thời gian đếm ngược là 1000ms (1 giây) cho mỗi bước
+        });
+    </script>    
 </body>
 
 </html>
